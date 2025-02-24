@@ -46,6 +46,7 @@ fun EditTextPref(
     title: String,
     modifier: Modifier = Modifier,
     summary: String? = null,
+    dialogComposable: Composable? = null,
     dialogTitle: String? = null,
     dialogMessage: String? = null,
     defaultValue: String = "",
@@ -117,6 +118,7 @@ fun EditTextPref(
         LaunchedEffect(null) {
             textVal = value
         }
+        dialogComposable ?:
         AlertDialog(
             modifier = Modifier
                 .fillMaxWidth(0.9f)
